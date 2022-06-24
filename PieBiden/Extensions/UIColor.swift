@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+// MARK: UIColor Extension
 extension UIColor {
     convenience init(rgb: UInt) {
         self.init(

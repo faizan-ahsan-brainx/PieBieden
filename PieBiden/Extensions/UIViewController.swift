@@ -7,7 +7,10 @@
 
 import Foundation
 import UIKit
+
+// MARK: UIViewController Extension
 extension UIViewController {
+    // MARK: UIViewController Exteneded Functions
     static func instantiate(from storyboardName: StoryBoardName) -> Self {
         let storyboard = UIStoryboard(name: storyboardName.rawValue, bundle: nil)
         print(String(describing: self))
@@ -19,6 +22,7 @@ extension UIViewController {
         return controller
     }
 }
+// MARK: Storyboard Enum
 enum StoryBoardName: String{
     case main = "Main"
 }

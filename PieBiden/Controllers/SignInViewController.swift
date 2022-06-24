@@ -8,17 +8,19 @@
 import UIKit
 
 class SignInViewController: UIViewController {
-
+    // MARK: SignInViewController Outlets
     @IBOutlet var signInView: SignInView!
+    
+    // MARK: SignInViewController Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        signInView.configureOutlets()
-        // Do any additional setup after loading the view.
+        signInView.configureShadowOfOutlets()
     }
+    
+    // MARK: SignInViewController Action Functions
     @IBAction func goToSignUpScreen(_ sender: Any) {
         let signUpViewController =  SignUpViewController.instantiate(from: .main)
         navigationController?.pushViewController(signUpViewController, animated: true)
     }
-    
 }
 

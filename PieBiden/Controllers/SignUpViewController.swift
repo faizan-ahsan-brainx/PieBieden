@@ -8,17 +8,18 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    // MARK: SignUpViewController Outlets
     @IBOutlet var signUpView: SignUpView!
+    
+    // MARK: SignUpViewController Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        signUpView.configureOutlets()
+        signUpView.configureShadowsForOutlets()
         navigationController?.setNavigationBarHidden(true, animated: true)
-        // Do any additional setup after loading the view.
     }
-    @IBAction func goToSignInScreen(_ sender: Any) {
     
+    // MARK: SignUpViewController Action Functions
+    @IBAction func goToSignInScreen(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
-
     }
 }

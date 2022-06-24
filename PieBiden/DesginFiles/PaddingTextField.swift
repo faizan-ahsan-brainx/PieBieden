@@ -8,13 +8,15 @@
 import Foundation
 import UIKit
 class TextFieldWithPadding: UITextField {
+    // MARK: UITextField Instance Properties
     var textPadding = UIEdgeInsets(
         top: 15,
         left: 10,
         bottom: 15,
         right: 10
     )
-
+    
+    // MARK: UITextField Functions
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         let rect = super.textRect(forBounds: bounds)
         return rect.inset(by: textPadding)
